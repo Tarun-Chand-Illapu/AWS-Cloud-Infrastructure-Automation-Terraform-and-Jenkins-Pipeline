@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
 
 resource "aws_vpc" "project" {
   cidr_block       = "10.0.0.0/16"
@@ -135,6 +132,9 @@ resource "aws_instance" "server1" {
   user_data = base64encode(file("webserver2.sh"))
   vpc_security_group_ids = [aws_security_group.sg.id]
   subnet_id = aws_subnet.public1.id
+  tags = {
+    Name = "Server1"
+  }
 }
 
 resource "aws_instance" "server2" {
@@ -144,6 +144,9 @@ resource "aws_instance" "server2" {
   user_data = base64encode(file("webserver1.sh"))
   vpc_security_group_ids = [aws_security_group.sg.id]
   subnet_id = aws_subnet.public2.id
+  tags = {
+    Name = "server2"
+  }
 }
 
 
