@@ -8,7 +8,7 @@ cat <<EOF > /var/www/html/index.html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Terraform Project Success - Feature branch</title>
+  <title>Terraform Project Success - Feature branch checking merge</title>
   <style>
     /* Add animation and styling for the text */
     @keyframes colorChange {
