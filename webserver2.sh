@@ -8,7 +8,7 @@ cat <<EOF > /var/www/html/index.html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Terraform Project</title>
+  <title>Terraform Project Success</title>
   <style>
     /* Add animation and styling for the text */
     @keyframes colorChange {
